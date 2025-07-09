@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/gestion_rendez_vous.model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/gestion_rendez_vous.model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50788/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" />
+  <xs:complexType name="ArrayOfRendezVous">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RendezVous" nillable="true" type="tns:RendezVous" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRendezVous" nillable="true" type="tns:ArrayOfRendezVous" />
+  <xs:complexType name="RendezVous">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateDemande" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HeureDebut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeureFin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdMedecin" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMoyenPaiement" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPatient" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRv" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSoin" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" minOccurs="0" name="Patient" nillable="true" type="q1:patient" />
+      <xs:element minOccurs="0" name="Statut" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" minOccurs="0" name="medecin" nillable="true" type="q2:Medecin" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" minOccurs="0" name="moyenPaiement" nillable="true" type="q3:MoyenPaiement" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" minOccurs="0" name="soin" nillable="true" type="q4:Soin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RendezVous" nillable="true" type="tns:RendezVous" />
+</xs:schema>

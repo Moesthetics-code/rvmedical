@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MetierRvMedical.model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50788/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/gestion_rendez_vous.model" />
+  <xs:import schemaLocation="http://localhost:50788/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MetierRvMedical" />
+  <xs:complexType name="Agenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Creneau" type="xs:int" />
+      <xs:element minOccurs="0" name="DatePlanifie" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HeureDebut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeureFin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdAgenda" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMedecin" type="xs:int" />
+      <xs:element minOccurs="0" name="Lieu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Medecin" nillable="true" type="tns:Medecin" />
+      <xs:element minOccurs="0" name="Statut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titre" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/gestion_rendez_vous.model" minOccurs="0" name="rendezVous" nillable="true" type="q1:ArrayOfRendezVous" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agenda" nillable="true" type="tns:Agenda" />
+  <xs:complexType name="Medecin">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Utilisateur">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Idspecialite" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroOrdre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="agenda" nillable="true" type="tns:ArrayOfAgenda" />
+          <xs:element minOccurs="0" name="specialite" nillable="true" type="tns:specialite" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Medecin" nillable="true" type="tns:Medecin" />
+  <xs:complexType name="Utilisateur">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/MetierRvMedical" base="q2:personne">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IdRole" type="xs:int" />
+          <xs:element minOccurs="0" name="Identifiant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Motdepasse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:Role" />
+          <xs:element minOccurs="0" name="status" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Utilisateur" nillable="true" type="tns:Utilisateur" />
+  <xs:complexType name="Role">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="libelle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="ArrayOfAgenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Agenda" nillable="true" type="tns:Agenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgenda" nillable="true" type="tns:ArrayOfAgenda" />
+  <xs:complexType name="specialite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Idspecialite" type="xs:int" />
+      <xs:element minOccurs="0" name="codeSpecialite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomSpecialite" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="specialite" nillable="true" type="tns:specialite" />
+  <xs:complexType name="patient">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/MetierRvMedical" base="q3:personne">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateNaissance" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="GroupeSanguin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Poids" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="Taille" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="patient" nillable="true" type="tns:patient" />
+  <xs:complexType name="MoyenPaiement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdMoyenPaiement" type="xs:int" />
+      <xs:element minOccurs="0" name="libelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomMP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoyenPaiement" nillable="true" type="tns:MoyenPaiement" />
+  <xs:complexType name="Soin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cout" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSoin" type="xs:int" />
+      <xs:element minOccurs="0" name="Libelle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomSoin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Soin" nillable="true" type="tns:Soin" />
+  <xs:complexType name="ArrayOfpatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="patient" nillable="true" type="tns:patient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfpatient" nillable="true" type="tns:ArrayOfpatient" />
+</xs:schema>

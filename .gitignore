@@ -1,0 +1,32 @@
+# Dossiers générés automatiquement
+.vs/
+bin/
+obj/
+packages/
+TestResults/
+node_modules/
+wwwroot/lib/
+
+# Fichiers de build et utilisateur
+*.user
+*.suo
+*.cache
+*.pdb
+*.db
+*.log
+*.vsidx
+*.sdf
+*.csproj.user
+*.csproj.vspscc
+*.vssscc
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
+*.ncb
+
+# OS spécifiques
+.DS_Store
+Thumbs.db
+ehthumbs.db

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion_rendez_vous", "gestion_rendez_vous\gestion_rendez_vous.csproj", "{879ACF70-2E2A-49A3-BD67-D65AAF3D9E1F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D96B185-2089-4571-BEE1-FE6B32D0B99E} = {6D96B185-2089-4571-BEE1-FE6B32D0B99E}
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupRvMedical", "SetupRvMedical\SetupRvMedical.vdproj", "{995CA822-2827-41B0-8565-C522ECEB0BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetierRvMedical", "MetierRvMedical\MetierRvMedical.csproj", "{6D96B185-2089-4571-BEE1-FE6B32D0B99E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRvMedical", "APIRvMedical\APIRvMedical.csproj", "{767357AA-45EA-483C-881D-0AE18A111CD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceEmvoiMail", "ServiceEmvoiMail\ServiceEmvoiMail.csproj", "{6DBF1D08-C389-4478-AEA5-14DB79C0CE37}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSendMail", "SetupSendMail\SetupSendMail.vdproj", "{9174F0DE-9E5D-478C-4647-34D01ED854A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{879ACF70-2E2A-49A3-BD67-D65AAF3D9E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879ACF70-2E2A-49A3-BD67-D65AAF3D9E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879ACF70-2E2A-49A3-BD67-D65AAF3D9E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879ACF70-2E2A-49A3-BD67-D65AAF3D9E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995CA822-2827-41B0-8565-C522ECEB0BAA}.Debug|Any CPU.ActiveCfg = Debug
+		{995CA822-2827-41B0-8565-C522ECEB0BAA}.Release|Any CPU.ActiveCfg = Release
+		{6D96B185-2089-4571-BEE1-FE6B32D0B99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D96B185-2089-4571-BEE1-FE6B32D0B99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D96B185-2089-4571-BEE1-FE6B32D0B99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D96B185-2089-4571-BEE1-FE6B32D0B99E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767357AA-45EA-483C-881D-0AE18A111CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767357AA-45EA-483C-881D-0AE18A111CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767357AA-45EA-483C-881D-0AE18A111CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767357AA-45EA-483C-881D-0AE18A111CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DBF1D08-C389-4478-AEA5-14DB79C0CE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBF1D08-C389-4478-AEA5-14DB79C0CE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBF1D08-C389-4478-AEA5-14DB79C0CE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBF1D08-C389-4478-AEA5-14DB79C0CE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9174F0DE-9E5D-478C-4647-34D01ED854A0}.Debug|Any CPU.ActiveCfg = Debug
+		{9174F0DE-9E5D-478C-4647-34D01ED854A0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42BE5EA1-FCC4-4967-892E-64FEF9E384B3}
+	EndGlobalSection
+EndGlobal
