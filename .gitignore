@@ -7,6 +7,8 @@ TestResults/
 node_modules/
 wwwroot/lib/
 
+.ve
+
 # Fichiers de build et utilisateur
 *.user
 *.suo
